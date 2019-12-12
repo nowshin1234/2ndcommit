@@ -1,0 +1,53 @@
+
+<html>
+<head>
+<script>
+	<title>Registration Form</title>
+	
+	function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  var y = document.forms["myForm"]["fid"].value;
+var z = document.forms["myForm"]["fpass"].value;
+var w = document.forms["myForm"]["femail"].value;
+  if (x == "||" y=="||" z=="||" w=="")
+  {
+    alert("Name must be filled out");
+    return false;
+  }
+  
+}
+</script>
+	
+</head>
+<body>
+	<fieldset style="width:100px">
+
+		
+			<legend><h3>REGISTRATION</h3></legend>
+	<form name="myForm" action="login.html" onsubmit="return validateForm()" method="POST">
+					<b>Id </b><br>
+					<input type="text" name="fid"  /><br>
+				<b>Password</b><br>
+					<input type="password" name="fpass" /><br>
+				<b>Confirm Password</b><br>
+					<input type="password" name="cpassword" /><br>
+	
+					<b>Name</b> <br>
+					<input type="text" name="fname"  /><br>
+					
+					<b>Email</b> <br>
+					<input type="email" name="femail"  /><br>
+		<b>User Type</b><hr>
+				
+						<input type="radio" name="user"/> User
+						<input type="radio" name="user"/> Admin
+					
+				
+				<hr>
+				<br>
+						<input type="submit" name="register" value="register"> <a href="signin.html">Sign In</a>
+		</form>
+		</fieldset>
+	
+</body>
+</html>

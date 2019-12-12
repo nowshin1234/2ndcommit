@@ -1,0 +1,34 @@
+<html>
+<head>
+	<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fid"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+   
+  }
+  </script>
+</head>
+<body>
+	<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="POST">
+
+		<fieldset style="width:100px">
+			<legend><h3>LOGIN</h3></legend>
+
+					<b>User Id </b><br>
+					<input type="text" name="fid"  /><br>
+				<b>Password</b><br>
+					<input type="password" name="password" />
+					
+					
+					<input type="checkbox" name="rememberme"  />
+					<b>Remember me</b><br>
+					
+				<hr>
+				
+						<input type="submit" name="Login" value="Login"> <a href="registration.html">Register</a>
+		
+		</fieldset>
+	</form>
+</body>
+</html>
